@@ -90,6 +90,9 @@ fun Mostrar_Caracteres (num : Int){
         }
     }
 }
+
+
+
 fun dibujarPiramide(lado : Int) {
         repeat(lado) {
             repeat(lado - it) {
