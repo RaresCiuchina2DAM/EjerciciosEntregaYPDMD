@@ -5,31 +5,60 @@ fun main (args : Array<String>){
     print("El numero $fav es mi numero favorito\n")
     println("El numero ${fav.toDouble()} no me gusta")
 
-    println( funcionConParámetros(4))
+
     textoNombre("Marikiki")
     diEdad("Marikiki", 13)
 
     diResultado(sumaInteger(5,9),sumaString("5","9"))
-    var num = 0
-
-    //ES IGUAL A 0 O ESTA EN UN RANGO CON IF
-    if (num == 0) println("el $num es igual a 0")
-        else println("$num es diferente a 0")
-    if (num in 0..9) println("$num está entre 0 y 9")
-        else println("$num es mayor que 9")
-
+    funcionConParametros(34)
+    println(transformarIntADouble(12))
+    diHola("Victor")
+    diEdad(12,"Pablo")
     calcularPrecio(23,"Victor")
     calcularPrecioWhen(68,"Pepe")
     Mostrar_Caracteres(500)
     println()
     dibujarPiramide(2)
     juegoAdivinar()
-
+    listasMix()
+    calcularPrecioWhen(20,"PEPE")
+    calcularPrecio(15)
+    println("======================================================================")
+    println("funcion1 = ${funcion1(1,2,3,4)}")
+    println("funcion1 = ${funcion1(1,2,3,null)}")
+    println("funcion1 = ${funcion1(null,null,null,null)}")
+    println("======================================================================")
+    println("funcion2 = ${funcion2(1,2,3,4)}")
+    println("funcion2 = ${funcion2(1,2,3,null)}")
+    println("funcion2 = ${funcion2(null,null,null,null)}")
+    println("======================================================================")
+    println("funcion3 = ${funcion3(1,2,3,4)}")
+    println("funcion3 = ${funcion3(1,2,3,null)}")
+    println("funcion3 = ${funcion3(null,null,null,null)}")
+    println("======================================================================")
+    edificio(15,10)
 }
 
+fun transformarIntADouble(numero : Int): Double {
+    return numero.toDouble()
+}
+fun diHola(nombre : String) {
+    println("Hola $nombre")
+}
+fun diEdad(edad: Int, nombre: String) {
+    println("Hola, soy $nombre y tengo $edad años.")
+}
+fun sumaInteger(num1: Int, num2: Int): Double {
+    return (num1+num2).toDouble()
+}
+fun sumaString(String1: String, String2: String): Double {
+    return (String1+String2).toDouble()
+}
+fun diResultado(num1: Double, num2:Double){
+    println("sumaIntegers ha devuelto un $num1 y sumaStrings ha devuelto $num2")
+}
 
-
-fun funcionConParámetros (param : Int ) : Double{
+fun funcionConParametros (param : Int ) : Double{
     return param.toDouble()
 }
 fun textoNombre (persona : String){
@@ -37,17 +66,6 @@ fun textoNombre (persona : String){
 }
 fun diEdad (persona: String , edad :Int ){
     println("Soy $persona y tengo $edad")
-}
-
-fun sumaInteger(num1 : Int , num2 : Int): Int {
-    return  num1 + num2
-}
-fun sumaString (num1 : String , num2 : String ): Double{
-    return (num1.toInt()+num2.toInt()).toDouble()
-
-}
-fun diResultado (fun1 : Int , fun2 : Double ){
-    println("SumaInteger ha devuelto $fun1 y SumaString ha devuelto $fun2")
 }
 
 fun calcularPrecio (edad: Int , persona: String) {
@@ -84,6 +102,61 @@ fun dibujarPiramide(lado : Int) {
             println("\\")
     }
 }
+
+fun calcularPrecio(edad : Int){
+    if (edad in 0..17) {
+        println("TIENES OFERTA DE MENOR ")
+    }
+    if (edad in 0..65) {
+        println("PRECIO NORMAL ")
+    }
+    if (edad > 65) {
+        println("PRECIO DE SEÑOR MAYOR")
+    }
+}
+fun calcularPrecioWhen(edad : Int){
+    when (edad){
+        in 0..17 -> println("TIENES OFERTA DE MENOR DE EDAD")
+        in 18..64 -> println("No tienes oferta")
+        in 65..160 -> println( "GRATIS!")    }
+}
+fun funcion1(num1: Int?,num2: Int?,num3:Int?,num4:Int?): Int? {
+
+    return if (num1 ==null || num2 == null || num3 == null || num4==null){null}
+    else return num1+num2+num3+num4
+
+}
+fun funcion2(num1: Int?,num2: Int?,num3:Int?,num4:Int?): Int? {
+    var suma = num1?:0
+    suma += num2?:0
+    suma += num3?:0
+    suma += num4?:0
+    return suma
+}
+fun funcion3(num1: Int?,num2: Int?,num3:Int?,num4:Int?): Int? {
+    return if (num1 ==null || num2 == null || num3 == null || num4==null){null}
+    else{
+        var suma = num1?:0
+        suma += num2?:0
+        suma += num3?:0
+        suma += num4?:0
+        return suma}
+}
+fun edificio (pisos: Int,ventanas: Int) {
+    repeat(ventanas*3+2){
+        print("_")
+    }
+    println()
+    repeat(pisos) {
+        print("|")
+        repeat(ventanas){
+            print("_?_")
+        }
+        println("|")
+    }
+}
+
+
 
 fun readIntFromKeyboard(): Int {
     var result : Int?
@@ -153,6 +226,9 @@ fun encontrarListas(listaRandom : List<Int>) : List<Int> {
     }
     return output
 }
+
+
+
 
 
 

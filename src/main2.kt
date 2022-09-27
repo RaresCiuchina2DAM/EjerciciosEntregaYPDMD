@@ -1,8 +1,8 @@
 fun main() {
 
     var numeroPisos = 10
-    var numeroVentanas = 4
-    var numeroTorres = 3
+    var numeroVentanas = 8
+    var numeroTorres = 5
 
     crearRascacielos(numeroPisos,numeroVentanas,numeroTorres)
     println("-----------------------------------------------------\n Ejercicio Listas de varios tipos:\n")
