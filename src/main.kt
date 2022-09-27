@@ -1,5 +1,6 @@
 import kotlin.random.Random
 
+//se encuentra realizado desde el ejercicio 1, hasta el ejercicio Listas Mix
 fun main (args : Array<String>){
     val fav = 13L
     print("El numero $fav es mi numero favorito\n")

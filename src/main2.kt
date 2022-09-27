@@ -1,5 +1,5 @@
 fun main() {
-
+    // Ejercicios con entrega de clase
     var numeroPisos = 10
     var numeroVentanas = 8
     var numeroTorres = 5
