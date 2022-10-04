@@ -202,7 +202,7 @@ fun juegoAdivinar(){
                 true
             }
         }
-        }while (encontrado == false)
+        }while (!encontrado)
     }
 
 fun listasMix(){

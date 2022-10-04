@@ -25,8 +25,8 @@ fun ejercicio4(integer : Int, listInteger : List<Any>) : Int {
 }
 
 
-val ciudades = listOf("Alicante", "Almería", "Barcelona", "Bilbao", "Burgos", "Cádiz", "Cartagena", "Córdoba", "Gerona"
-    , "Gijón", "Granada", "Huelva", "Tenerife", "Ibiza", "Jerez", "Madrid", "Málaga", "Marbella", "Murcia", "Oviedo"
-    , "Pamplona", "Ronda", "Salamanca", "San Sebastián", "Santander", "Santiago", "Sevilla", "Tarragona", "Toledo",
-    "Valencia", "Zaragoza")
+
+
+
+
 
