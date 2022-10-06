@@ -7,6 +7,7 @@ fun main() {
 
     crearRascacielos(numeroPisos, numeroVentanas, numeroTorres)
     println("-----------------------------------------------------\n Ejercicio Listas de varios tipos:\n")
+
     listas_varios_tipos()
 
 
@@ -40,6 +41,8 @@ fun main() {
     val dadoEj3 = Dado(10, 20)
 
     juegoLanzarDado(jug1, jug2, 6, dadoEj3)
+
+    mostrarMatriz()
 
 }
 
@@ -106,6 +109,8 @@ fun crearRascacielos(numeroPisos: Int, numeroVentanas:Int, numeroTorres:Int) {
         }
     }
     println()
+
+
         repeat(numeroPisos) {
             repeat(numeroTorres) {
                 print("|")
@@ -121,10 +126,11 @@ fun crearRascacielos(numeroPisos: Int, numeroVentanas:Int, numeroTorres:Int) {
         }
     }
 
+
 fun listas_varios_tipos(){
     val lista = listOf("Hola,", 2, 3, "¿", 0.1, "Qué", 1, "tal", 0.9, "?")
     var contStrings =""
-    var sumDouble = 0.0
+    var sumDouble = ""
 
 
     lista.forEach {
@@ -137,6 +143,34 @@ fun listas_varios_tipos(){
 
     println("El contenido de tipo String es : $contStrings")
     println("El contenido sumatorio es : $sumDouble")
+
+}
+
+fun mostrarMatriz(){
+
+
+    var cadena = "5 8 6\n" +
+            "9 6 5\n"+
+            "5 8 3"
+
+    var cadena1 = cadena.split("\n")
+    cadena1.forEach(){
+         cadena1 = it.split(" ")
+    }
+    println(cadena1[0])
+    println(cadena1[1])
+    println(cadena1[2])
+    for (i in cadena1){
+
+    }
+
+
+
+
+
+
+
+
 
 }
 
