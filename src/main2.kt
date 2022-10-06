@@ -1,5 +1,3 @@
-import javax.lang.model.type.ArrayType
-
 fun main() {
     // Ejercicios con entrega de clase
     var numeroPisos = 10
@@ -8,6 +6,7 @@ fun main() {
 
     crearRascacielos(numeroPisos,numeroVentanas,numeroTorres)
     println("-----------------------------------------------------\n Ejercicio Listas de varios tipos:\n")
+
     listas_varios_tipos()
 
 
@@ -73,6 +72,8 @@ fun crearRascacielos(numeroPisos: Int, numeroVentanas:Int, numeroTorres:Int) {
         }
     }
     println()
+
+
         repeat(numeroPisos) {
             repeat(numeroTorres) {
                 print("|")
@@ -88,10 +89,11 @@ fun crearRascacielos(numeroPisos: Int, numeroVentanas:Int, numeroTorres:Int) {
         }
     }
 
+
 fun listas_varios_tipos(){
     val lista = listOf("Hola,", 2, 3, "¿", 0.1, "Qué", 1, "tal", 0.9, "?")
     var contStrings =""
-    var sumDouble = 0.0
+    var sumDouble = ""
 
 
     lista.forEach {
