@@ -146,36 +146,22 @@ fun listas_varios_tipos(){
 
 }
 
-fun mostrarMatriz(){
+fun mostrarMatriz() {
 
 
-    var cadena = "5 8 6\n" +
-            "9 6 5\n"+
+    val cadena = "5 8 6\r" +
+            "9 6 5\r" +
             "5 8 3"
+    val array1: MutableList<Char> = mutableListOf(cadena.toCharArray())
 
-    var cadena1 = cadena.split("\n")
-    cadena1.forEach(){
-         cadena1 = it.split(" ")
+    for (i in cadena.indices) {
+        if (cadena[i] != ' ') {
+            array1[i] = cadena[i]
+        }
     }
-    println(cadena1[0])
-    println(cadena1[1])
-    println(cadena1[2])
-    for (i in cadena1){
-
-    }
-
-
-
-
-
-
-
-
-
-
-
 
 }
+
 
 
 
