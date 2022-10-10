@@ -11,7 +11,6 @@ fun main() {
     listas_varios_tipos()
 
 
-
     println("-----------------------------------------------------\n")
     //EJERCICIO CLASES 2
     val dado1 = Dado();
@@ -42,7 +41,8 @@ fun main() {
 
     juegoLanzarDado(jug1, jug2, 6, dadoEj3)
 
-    mostrarMatriz()
+
+
 
 }
 
@@ -143,22 +143,6 @@ fun listas_varios_tipos(){
 
     println("El contenido de tipo String es : $contStrings")
     println("El contenido sumatorio es : $sumDouble")
-
-}
-
-fun mostrarMatriz() {
-
-
-    val cadena = "5 8 6\r" +
-            "9 6 5\r" +
-            "5 8 3"
-    val array1: MutableList<Char> = mutableListOf(cadena.toCharArray())
-
-    for (i in cadena.indices) {
-        if (cadena[i] != ' ') {
-            array1[i] = cadena[i]
-        }
-    }
 
 }
 
