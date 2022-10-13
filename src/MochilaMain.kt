@@ -21,6 +21,11 @@ fun cogerConMasValor(Ladron : Persona , articulos : Array<Objeto> ){
     }
     println(rentabilidad.max())
 
+    if (rentabilidad.max() < Ladron.capacidadPesoMochilaMax){
+
+    }
+
+
     for (i in rentabilidad.indices){
         if (rentabilidad.max() =)
         if ()
