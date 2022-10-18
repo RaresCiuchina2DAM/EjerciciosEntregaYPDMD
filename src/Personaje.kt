@@ -1,4 +1,6 @@
-class Persona {
+
+
+class Personaje {
     var oficio = ""
     var nombre = ""
     var capacidadPesoMochilaMax=0.0

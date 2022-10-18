@@ -1,7 +1,7 @@
 import kotlin.math.max
 
 fun main() {
-    var Ladron = Persona("Ladrón","Jack",10)
+    var Ladron = Personaje("Ladrón","Jack",10)
     var objeto1 = Objeto(5,10)
     var objeto2 = Objeto(4, 40 )
     var objeto3 = Objeto(6,30)
@@ -14,7 +14,7 @@ fun main() {
 
 }
 
-fun cogerConMasValor(Ladron : Persona , articulos : Array<Objeto> ){
+fun cogerConMasValor(Ladron : Personaje , articulos : Array<Objeto> ){
     val rentabilidad = Array<Double>(size = articulos.size){0.00}
     for (i  in articulos.indices) {
         rentabilidad[i] = (articulos[i].valor / articulos[i].peso).toDouble()
