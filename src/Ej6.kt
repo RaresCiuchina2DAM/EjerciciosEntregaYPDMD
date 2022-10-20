@@ -8,7 +8,7 @@ fun main() {
 
 }
 
-fun cifradoCesar(clave: Int , paswd: String): String{
+/*private fun cifradoCesar(clave: Int, paswd: String): String{
 
     var clave1=clave
     while (clave1 >25){
@@ -22,6 +22,8 @@ fun cifradoCesar(clave: Int , paswd: String): String{
         }else passcif += element + clave1
     }
     return passcif
-}
+    */
+
+
 
 
